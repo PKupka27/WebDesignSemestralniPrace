@@ -1,0 +1,146 @@
+/* Pro správné zobrazení na mobilních zařízeních musí být v <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ https://css-tricks.com/snippets/html/responsive-meta-tag/
+ */
+section div,
+header .background > div {
+    padding: 3rem 1rem;
+    max-width:100%;
+}
+
+section:nth-child(odd) {
+    background-color: black;
+    color: white;
+}
+
+section:nth-child(even) {
+    background-color: white;
+    color: black;
+}
+
+nav {
+    background-color: black;
+}
+nav a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-family: Calibri;
+}
+nav a:hover,
+nav a:focus,
+
+nav a:active {
+  background-color: white;
+  color: black;
+}
+
+#produkty figure{
+    text-align: center;
+}
+
+form input,
+form textarea {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: 0.15rem solid rgba(255, 255, 255, 0.2);
+    background-color: white;
+    color: black;
+    display: block;
+    width: 75%;
+}
+
+form button {
+    background-color: white;
+    color: #245e75;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.8rem;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+footer {
+    padding: 1rem 1rem;
+}
+
+/*// Medium screens*/
+@media only screen and (min-width: 40.063em) {
+    nav a {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    .container {
+        width: 40rem;
+        margin: 0 auto;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        background: darkviolet;
+        justify-content: space-around;
+    }
+
+    figure{
+        background: orange;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+    }
+
+    nav {
+        position: sticky;
+        top:0;
+    }
+
+    .background {
+        background: url(http://www.pivnizasilka.cz/wp-content/uploads/2015/02/CZU-1.jpg);
+        background-size: cover;
+    }
+
+    .header-text {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 2rem;
+        margin: 10rem 0;
+    }
+
+    .background .container {
+        height: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+
+}
+
+/*// Large screens*/
+@media only screen and (min-width: 64.063em) {
+    nav a {
+        padding: 2rem;
+
+    }
+
+    .container {
+        width: 64rem;
+    }
+
+
+}
+
+/*// XLarge screens*/
+@media only screen and (min-width: 90.063em) {
+    nav a {
+        padding: 3rem;
+
+    }
+}
