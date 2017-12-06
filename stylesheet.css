@@ -8,18 +8,37 @@ header .background > div {
     max-width:100%;
 }
 
+header{
+    background-color: rgb(80,9,9);
+}
+
 section:nth-child(odd) {
-    background-color: black;
-    color: white;
+    background-color: rgb(17,3,3);
+    color: white;    
 }
 
 section:nth-child(even) {
-    background-color: white;
+    background-color: rgb(80,9,9);
     color: black;
 }
 
+#pobocky{
+    text-align: center;
+}
+
+table.otevdoba, table.otevdoba td{
+    border: solid 2px; 
+    margin-left:auto; 
+    margin-right:auto; 
+    width:100px;
+}
+
+
+
+
+
 nav {
-    background-color: black;
+    background-color: rgb(17,3,3);
 }
 nav a {
     color: white;
@@ -31,8 +50,7 @@ nav a:hover,
 nav a:focus,
 
 nav a:active {
-  background-color: white;
-  color: black;
+  background-color: rgb(80,9,9);
 }
 
 #produkty figure{
@@ -65,7 +83,9 @@ form button:hover {
 }
 
 footer {
+    text-align: center;
     padding: 1rem 1rem;
+    background-color: rgb(80,9,9);
 }
 
 /*// Medium screens*/
@@ -100,20 +120,12 @@ footer {
         top:0;
     }
 
-    .background {
-        background: url(http://www.pivnizasilka.cz/wp-content/uploads/2015/02/CZU-1.jpg);
-        background-size: cover;
-    }
+    
 
-    .header-text {
-        background-color: white;
-        padding: 1rem;
-        border-radius: 2rem;
-        margin: 10rem 0;
-    }
+    
 
     .background .container {
-        height: 40rem;
+        text-align: center; 
         display: flex;
         flex-direction: column;
         justify-content: center;
