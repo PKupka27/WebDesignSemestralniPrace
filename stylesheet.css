@@ -1,81 +1,68 @@
-/* Pro správné zobrazení na mobilních zařízeních musí být v <head>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- https://css-tricks.com/snippets/html/responsive-meta-tag/
- */
 section div,
 header .background > div {
     padding: 3rem 1rem;
-    max-width:100%;
+    max-width: 100%;
 }
-
-header{
-    background-color: rgb(59,171,59);
+header {
+    background-color: rgb(59, 171, 59);
 }
-
-section:nth-child(odd){
-    background-color: rgb(35,67,35);
-    color: white;    
+section:nth-child(odd) {
+    background-color: rgb(35, 67, 35);
+    color: white;
 }
-
-section:nth-child(even) figure{
-    color: white;   
-    background: rgb(59,171,59);
+section:nth-child(even) figure {
+    color: white;
+    background: rgb(59, 171, 59);
 }
-
 section:nth-child(even) {
-    background-color: rgb(59,171,59);
+    background-color: rgb(59, 171, 59);
     color: black;
 }
-
-section:nth-child(even) figure{
-    color: white;   
-    background: rgb(52,124,52);
+section:nth-child(even) figure {
+    color: white;
+    background: rgb(52, 124, 52);
 }
-
-#pobocky{
+#pobocky {
     text-align: center;
 }
-
-table.otevdoba, table.otevdoba td{
-    border: solid 1px; 
-    margin-left:auto; 
-    margin-right:auto; 
-    width:100px;
+table.otevdoba,
+table.otevdoba td {
+    border: solid 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
 }
-
-table.cenik, table.cenik td{
-    border: solid 2px; 
-    
+table.cenik,
+table.cenik td {
+    border: solid 2px;
 }
-
-table.cenik td{
-    margin-left: 50px; 
+table.cenik td {
+    margin-left: 50px;
     margin-right: auto;
     width: 1000px;
     text-align: center;
 }
-
-
 nav {
-    background-color: rgb(35,67,35);
+    background-color: rgb(35, 67, 35);
+    position: sticky;
+    top: 0;
 }
 nav a {
+    font-size: 120%;
     color: white;
-    display: block;
+    display: inline-block;
     text-decoration: none;
     font-family: Calibri;
+    padding: 1.5rem;
 }
 nav a:hover,
 nav a:focus,
-
 nav a:active {
-  background-color: rgb(59,171,59);
+    background-color: rgb(59, 171, 59);
 }
-
-#produkty figure{
+#produkty figure {
     text-align: center;
 }
-
 form input,
 form textarea {
     margin: 0.5rem 0;
@@ -87,7 +74,6 @@ form textarea {
     display: block;
     width: 75%;
 }
-
 form button {
     background-color: white;
     color: #245e75;
@@ -95,80 +81,89 @@ form button {
     border-radius: 0.5rem;
     padding: 0.6rem 0.8rem;
 }
-
 form button:hover {
     cursor: pointer;
     background-color: #ccc;
 }
-
 footer {
     text-align: center;
     padding: 1rem 1rem;
-    background-color: rgb(59,171,59);
+    background-color: rgb(59, 171, 59);
 }
+.container {
+    width: 40rem;
+    margin: 0 auto;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+figure {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+.background .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*// Tablets*/
 
-/*// Medium screens*/
-@media only screen and (min-width: 40.063em) {
-    nav a {
-        display: inline-block;
-        padding: 1rem;
+@media only screen and (min-width: 40.063em) and (max-width: 63.063em) {
+    h1 {
+        font-size: 90%;
     }
-
-    .container {
-        width: 40rem;
-        margin: 0 auto;
+    h2 {
+        font-size: 85%;
     }
-
-    .flex-container {
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    figure{
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 0;
-    }
-
     nav {
-        position: sticky;
-        top:0;
+        font-size: 85%;
     }
-    
-
-    
-
-    .background .container {
-        text-align: center; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    section {
+        font-size: 80%;
     }
-
-
-
+    footer {
+        font-size: 70%;
+    }
+    form {
+        font-size: 70%;
+    }
+    img {
+        width: 130px;
+        height: 130px;
+    }
 }
+/*// Phones*/
 
-/*// Large screens*/
-@media only screen and (min-width: 64.063em) {
-    nav a {
-        padding: 2rem;
-
+@media only screen and (max-width: 40.063em) {
+    h1 {
+        font-size: 75%;
     }
-
-    .container {
-        width: 64rem;
+    h2 {
+        font-size: 50%;
     }
-
-
-}
-
-/*// XLarge screens*/
-@media only screen and (min-width: 90.063em) {
-    nav a {
-        padding: 3rem;
-
+    nav {
+        font-size: 50%;
+    }
+    section {
+        font-size: 60%;
+    }
+    footer {
+        font-size: 60%;
+        text-align: center;
+    }
+    form {
+        font-size: 60%;
+    }
+    img {
+        width: 110px;
+        height: 110px;
+    }
+    header p {
+        font-size: 80%;
     }
 }
